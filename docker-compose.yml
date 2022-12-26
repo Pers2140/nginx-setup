@@ -8,6 +8,7 @@
 version: '3.1'
 
 services:
+# username=guacadmin, pass=guacadmin
   guacamole:
       image: oznu/guacamole
       container_name: guacamole
@@ -15,8 +16,6 @@ services:
         - ./config:/config
       ports:
         - 8080:8080
-      
-  # mkdir portainer 
   nginx-manager:
       image: 'jc21/nginx-proxy-manager:latest'
       restart: unless-stopped
